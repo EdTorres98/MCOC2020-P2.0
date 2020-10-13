@@ -10,7 +10,7 @@
 ![4](https://user-images.githubusercontent.com/69275311/95888195-28a2b600-0d57-11eb-9745-675070fe3e92.png)
 ![5](https://user-images.githubusercontent.com/69275311/95888202-29d3e300-0d57-11eb-8eac-41f32483e1b2.png)
 
-* Resultando un Peso total de la estructura: 24197.43808 [N]
+* El Peso total de la estructura inicial resulta: 24197.43808 [N]
 
 ## 1)
 
