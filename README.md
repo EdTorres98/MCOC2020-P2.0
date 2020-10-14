@@ -15,7 +15,31 @@
 ## 1)
 
 
-## 2)
+## 2) Explique en detalle su función de rediseño de cada barra. Si existen supuestos importantes, declarelos ahora. 
+
+Para utilizar la función de rediseño de cada barra utilizada, en primer lugar se seleccionaron con la función rediseñar del reticulado, las 5 fuerzas de mayor magnitud dentro del reticulado. Para esto se fueron almacenando las fuerzas dentro de un vector, guardande el subindice dentro del vector. Luego de elegidas las 5 fuerzas, se utiliza el vector en la función rediseñar de las barras, donde en primer lugar forzamos la fluencia y suponemos que el óptimo está en R=t, aguantando la mayor fuerza y lo hará más liviano. De esa manera ajustamos a 0.97 el FU, lo que generará un aumento en el factor de fluencia a largo plazo, lo que se traduce en las 2 primeras líneas de la función mostrada. Posteriormente con while se comprueba que la esbeltez se deba cumplir, entonces si esto no se cumple, se ajusta y se sube el área con R y t, y se baja el FU si es que FU>1 o λ<300.
+
+Cabe mencionar que para obtener el reticulado rediseñado y los gráficos, se creó un nuevo archivo llamado Fu_caso.py
+
+A continuación se muestra la función rediseñar de las barras:
+
+```
+def rediseñar(self, Fu, ret, φ=0.9):
+
+		self.R = np.sqrt(abs(Fu)/(φ*self.σy*np.pi*0.98))
+		self.t = np.sqrt(abs(Fu)/(φ*self.σy*np.pi*0.98))
+		A = self.calcular_area()
+		I = self.calcular_inercia()
+		L = self.calcular_largo(ret)
+		FU = (abs(Fu)/(φ*A*self.σy))
+		i = np.sqrt(I/A)
+		λ =L/i
+		while FU > 1. and λ<300:
+			self.R=1.05*self.R
+			self.t=1.05*self.t
+		print (f"FU,λ = {FU,λ}")
+		return None
+```
 
 
 ## 3)
