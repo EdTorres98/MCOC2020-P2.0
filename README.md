@@ -1,5 +1,4 @@
-# MCOC2020_P2_G3_Entrega5
-# Concurso: ¡Diseñe su puente!
+# MCOC2020_P2_G3_Entrega5 - Concurso: ¡Diseñe su puente!
 
 Escribir un informe que relate la evolución de su diseño en el tiempo. 
 
